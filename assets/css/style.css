@@ -23,7 +23,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 button, input, textarea, select { appearance: none; -moz-appearance: none; -webkit-appearance: none; font-family: inherit; font-size: inherit; border: none; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; }
 
-.wrapper { max-width: 1250px; padding-left: 40px; padding-right: 40px; margin: 0 auto; }
+.wrapper { max-width: 1250px; width: 100%; padding-left: 40px; padding-right: 40px; margin: 0 auto; }
 .wrapper-no-gutter { padding-left: 0; padding-right: 0; }
 @media only screen and (min-width: 768px) { .wrapper { padding-right: 35px; padding-left: 35px; } }
 @media only screen and (min-width: 1400px) { .wrapper { padding-right: 75px; padding-left: 75px; max-width: 1750px; } }
@@ -272,5 +272,4 @@ header .hero-section > section { position: relative; }
 .home #popup .popup-content .popup-close:hover, .home #popup .popup-content .popup-close:focus { background: #e2ceb8; }
 .home #popup .popup-content .popup-close:before, .home #popup .popup-content .popup-close:after { width: .5em; height: 2px; content: ""; display: block; position: absolute; top: 0; bottom: 0; right: 0; background: #212c42; left: 0; margin: auto; }
 .home #popup .popup-content .popup-close:after { -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
-
 /*# sourceMappingURL=style.css.map */

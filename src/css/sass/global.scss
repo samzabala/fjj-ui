@@ -2,6 +2,7 @@
 //helpers
 .wrapper {
     max-width: 1250px;
+    width:100%; //wth ie
     padding-left: $gutter * .8;
     padding-right: $gutter * .8;
     margin: 0 auto; 
