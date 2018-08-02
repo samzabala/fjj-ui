@@ -381,10 +381,13 @@ ul{
     &-mobile,&-desktop{
         display:none;
     }
+    //smallest screens are babies
+    @media only screen and (max-width: $screen-secret){
+        font-size: .9375em;
+    }
 
 
     @media only screen and (max-width: $screen-xxs){
-        font-size: .9375em;
         padding: 1.5em 2.5em;
 
         &:before{

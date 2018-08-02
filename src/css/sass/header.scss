@@ -444,7 +444,11 @@ header{
         }
 
         h1{
-            margin-bottom: .125em;
+            margin-bottom: $gutter * .4;
+        }
+
+        .btn{
+            margin-bottom:0;
         }
 
         &>section{
@@ -459,10 +463,15 @@ header{
                 display:none;
             }
         }
+        
 
-        // @media only screen and (min-width: $screen-md){
-        //     background-size:cover;
-        // }
+        @media only screen and (min-width: $screen-sm){
+            
+
+            h1{
+                margin-bottom: $gutter * .5;
+            }
+        }
     }
 
 

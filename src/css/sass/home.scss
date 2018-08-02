@@ -4,7 +4,6 @@
         color: $wt;
         background-image: url(../img/header_img_mobile.jpg);
         background-color: darken(saturate(adjust-hue($blue-dark, -2), 40.00), 16.47);
-        
 
         .pointers{
             margin-bottom: $gutter;
@@ -35,10 +34,6 @@
 
         @media only screen and (min-width: $screen-sm){
             background-image: url(../img/header_img_laptop.jpg);
-
-            h1{
-                margin-bottom: $gutter/2;
-            }
 
             .pointers{
     

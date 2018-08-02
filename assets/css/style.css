@@ -119,7 +119,8 @@ p, ul { margin: 5px 0 25px; font-size: 1em; line-height: 2.25; }
 .btn-blue { background: #769db8; color: #FFF; }
 .btn-blue:hover, .btn-blue:focus { background: #4d7795; }
 .btn-mobile, .btn-desktop { display: none; }
-@media only screen and (max-width: 767px) { .btn { font-size: .9375em; padding: 1.5em 2.5em; }
+@media only screen and (max-width: 360px) { .btn { font-size: .9375em; } }
+@media only screen and (max-width: 767px) { .btn { padding: 1.5em 2.5em; }
   .btn:before { left: 1em; }
   .btn:after { right: 1em; }
   .btn-mobile { display: inline-block; } }
@@ -211,10 +212,12 @@ header nav #fancy-menu ul.social li a:hover svg, header nav #fancy-menu ul.socia
   header nav #fancy-menu { top: 67px; width: 100vw; } }
 header .hero-section { background-size: 100% auto; background-repeat: no-repeat; padding: 140px 0 100px; }
 header .hero-section .arrow-button.down { display: block; margin: 50px auto; }
-header .hero-section h1 { margin-bottom: .125em; }
+header .hero-section h1 { margin-bottom: 20px; }
+header .hero-section .btn { margin-bottom: 0; }
 header .hero-section > section { position: relative; }
 @media only screen and (max-width: 767px) { header .hero-section { padding-top: 117px; } }
 @media only screen and (max-width: 1399px) { header .hero-section .arrow-button.down { display: none; } }
+@media only screen and (min-width: 768px) { header .hero-section h1 { margin-bottom: 25px; } }
 
 .home .hero-section { color: #fff; background-image: url(../img/header_img_mobile.jpg); background-color: #02060d; }
 .home .hero-section .pointers { margin-bottom: 50px; }
@@ -223,7 +226,6 @@ header .hero-section > section { position: relative; }
 @media only screen and (max-width: 1919px) { .home .hero-section .pointers { padding: 0; } }
 @media only screen and (min-width: 414px) { .home .hero-section { background-image: url(../img/header_img_tablet.jpg); } }
 @media only screen and (min-width: 768px) { .home .hero-section { background-image: url(../img/header_img_laptop.jpg); }
-  .home .hero-section h1 { margin-bottom: 25px; }
   .home .hero-section .pointers h3 { font-size: 2.1875em; }
   .home .hero-section .pointers h3 + p { font-size: .875em; } }
 @media only screen and (min-width: 1400px) { .home .hero-section { background-image: url(../img/header_img_desktop.jpg); }
