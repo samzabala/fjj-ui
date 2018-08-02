@@ -182,7 +182,7 @@ header nav #fancy-menu ul li a { text-decoration: none; -webkit-transition: .1s 
 header nav #fancy-menu ul.global { margin-bottom: 1em; }
 header nav #fancy-menu ul.global li:before { content: none; }
 header nav #fancy-menu ul.global li a { padding: 1.5em; display: inline-block; text-decoration: none; line-height: 1; font-size: 1.25em; color: #dad6cb; -webkit-transition: .1s ease-in all; transition: .1s ease-in all; position: relative; }
-header nav #fancy-menu ul.global li a:before { content: ""; display: block; height: 2px; width: 0; position: absolute; bottom: 1em; background: #fff; left: 0; right: 0; margin: auto; -webkit-transition: .1s ease-in all; transition: .1s ease-in all; }
+header nav #fancy-menu ul.global li a:before { content: ""; display: block; height: 2px; width: 0; position: absolute; bottom: 1em; background: #769db8; left: 0; right: 0; margin: auto; -webkit-transition: .1s ease-in all; transition: .1s ease-in all; }
 header nav #fancy-menu ul.global li a:hover, header nav #fancy-menu ul.global li a:focus { color: #769db8; }
 header nav #fancy-menu ul.global li a:hover:before, header nav #fancy-menu ul.global li a:focus:before { width: 50px; }
 header nav #fancy-menu ul.social { padding: 1.5em 0; }

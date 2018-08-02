@@ -1,7 +1,15 @@
+
+$(document).on('click',function(e){
+    $(".menu-toggle,#fancy-menu").removeClass("active");
+})
 $(".menu-toggle").on("click",function(e){
+    e.stopPropagation();
     e.preventDefault();
     $(".menu-toggle,#fancy-menu").toggleClass("active");
 });
+$('#fancy-menu').on('click',function(e){
+    e.stopPropagation();
+})
 $(document).ready(function() {
     //carousels
     $('.owl-carousel.pointers').owlCarousel({
