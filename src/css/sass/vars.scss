@@ -1,0 +1,38 @@
+//typography
+$font-serif : 'Tinos', serif;
+$font-sans : 'Libre Franklin', sans-serif;
+$font-acc : 'Teko', sans-serif;
+
+$gold: #cca882;
+$gold-hover: lighten($gold,15%);
+$gold-pale: lighten(desaturate(adjust-hue($gold, 13), 25.19), 17.06);
+
+$blue: #769db8;
+$blue-hover: darken($blue,15%);
+$blue-dark: darken(saturate(adjust-hue($blue, 15), 1.60), 39.80);
+
+$body: #000;
+$wt: #fff;
+$light: #ccc;
+
+
+//framework
+$gutter: 50px;
+$base-font:16px;
+
+$screen-xs: 414px;
+$screen-sm: 768px;
+$screen-md: 1400px;
+$screen-lg: 1920px;
+$screen-secret: 400px; //the tinies
+
+$screen-xxs: $screen-sm - 1;
+
+$screen-xs-max: $screen-sm - 1;
+$screen-sm-max: $screen-md - 1;
+$screen-md-max: $screen-lg - 1;
+
+
+//template
+$nav-height: 90px;
+$nav-height-sm: 67px;

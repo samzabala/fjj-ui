@@ -1,0 +1,24 @@
+{
+	"mappings": [
+		{
+			"src": "src/css",
+			"dest": "assets/css"
+		},
+		{
+			"src": "src/js",
+			"dest": "assets/js"
+		}
+	],
+
+	"ignores": ["src/css/sass","src/js/plugins"],
+
+	"options": {
+		"outputStyle": "compact",
+		"lineComments": false,
+		"debugInfo": false,
+		"sourceMap": true,
+		"unixNewlines": false,
+        "autoprefix": true,
+        "autoprefixConfig" : "> 1%, last 2 versions, Firefox ESR, Opera 12.1"
+	}
+}

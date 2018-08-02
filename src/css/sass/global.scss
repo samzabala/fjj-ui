@@ -1,0 +1,576 @@
+
+//helpers
+.wrapper {
+    max-width: 1250px;
+    padding-left: $gutter * .8;
+    padding-right: $gutter * .8;
+    margin: 0 auto; 
+    @extend .cf;
+
+    &-no-gutter{
+        padding-left:0;
+        padding-right:0;
+    }
+
+    @media only screen and (min-width:$screen-sm){
+        padding-right: $gutter* .7;
+        padding-left: $gutter* .7;
+    }
+
+    @media only screen and (min-width:$screen-md){
+        padding-right: $gutter * 1.5;
+        padding-left: $gutter * 1.5;
+        max-width: $screen-md * 1.25;
+    }
+
+    @media only screen and (min-width:$screen-lg){
+        padding-right: $gutter * 2;
+        padding-left: $gutter * 2;
+        max-width: $screen-lg;
+    }
+}
+
+.cf:before,
+.cf:after{
+    content: "";
+    display: block;
+}
+
+
+.cf:after{
+    clear: both;
+}
+
+
+.cf{
+    zoom: 1;
+}
+
+.text{
+
+    &-font-serif {
+        font-family:$font-serif;
+    }
+    &-font-sans {
+        font-family:$font-sans;
+    }
+    &-font-acc { 
+        font-family:$font-acc;
+        letter-spacing: .25em;
+        margin-left: .25em;
+    }
+    &-lead {
+        font-size:1.875em;
+    }
+    &-tiny {
+        font-size: .75em
+    }
+    &-bold{
+        font-weight:800;
+    }
+    &-lighter{
+        font-weight:lighter;
+    }
+    &-uppercase {
+        text-transform:uppercase;
+    }
+    &-center {
+        text-align:center;
+    }
+    &-right {
+        text-align:right;
+    }
+    &-justify {
+        text-align:justify;
+    }
+    &-gold {
+        color: $gold;
+    }
+    &-blue {
+        color: $blue;
+        &-dark{
+            color: $blue-dark;
+        }
+    }
+    &-wt{
+        color:$wt;
+    }
+    &-hidden {
+        text-indent:-99999em;
+        overflow:hidden;
+        color:transparent;
+        display:inline-block;
+    }
+}
+
+.video {
+    &-button{
+        @extend .text-hidden;
+        overflow: visible;
+        background: $blue;
+        width: 1em;
+        box-shadow: 0 0 10px 0 rgba($body,.5);
+        height:1em;
+        font-size: 3.375em;
+        position:relative;
+        transform-origin: center center;
+        transform: rotate(45deg);
+        margin-bottom: .75em;
+        &:before{
+            content:"";
+            display:block;
+            position:absolute;
+            margin:auto;
+            top:-1em;
+            bottom:-1em;
+            border: .125em solid transparent;
+            box-shadow: 0 0 0 1px $gold, inset 0 0 0 1px $gold;
+            right:-1em;
+            left:-1em;
+            width: 1.5625em;
+            height:1.5625em;
+        }
+        
+        &:after{
+            display:block;
+            content:"";
+            border: .0625em solid $wt;
+            border-left: .0625em solid transparent;
+            border-bottom: .0625em solid transparent;
+            width:0;
+            height:0;
+            position:absolute;
+            top:.03125em;
+            bottom:0;
+            left:0;
+            right:.03125em;
+            margin:auto;
+        }
+    
+        &:hover{
+            background: $blue-hover;
+        }
+    
+        @media only screen and (min-width:$screen-lg){
+    
+            font-size: 4.5625em;
+        }
+    }
+
+    &-wrapper{
+        overflow:hidden;
+        padding-bottom: 56.25%;
+        height:0;
+        position:relative;
+
+        iframe {
+            position:absolute;
+            top:0!important;
+            bottom:0!important;
+            left:0!important;
+            right:0!important;
+            width:100%!important;
+            height:100%!important;
+        }
+    }
+}
+
+
+
+//scaffolding
+body{
+    min-width:320px;
+    font-family: $font-sans;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: .25em;
+}
+h2,h3,h4,h5,h6{
+    line-height: 2;
+}
+
+h1{ 
+    @extend .text-font-serif;
+    line-height:1;
+    font-size: 4.8125em;
+}
+h2{ font-size: 2.25em; line-height:1.375; }
+h3{ font-size: 1.25em; line-height: 1.625; }
+h4{ font-size: 1.0625em; line-height:2; }
+h5{ font-size: 1em; }
+h6{ font-size: .875em; }
+
+
+
+ul{
+    padding-left:1.5625em;
+
+    li:before{
+        color: $blue;
+        content: "•";
+        display: inline-block;
+        width: 1.5625em;
+        margin-left: -1.5625em;
+    }
+
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
+a{
+    color: $gold;
+
+    &:hover,&:focus{
+        color: $gold-hover;
+    }
+}
+
+ blockquote{
+    @extend .text-font-serif;
+    padding-left: $gutter * .8;
+    margin: $gutter 0 $gutter;
+    position:relative;
+    font-size: 1.875em;
+    line-height:1.25;
+
+    &:before,
+    &:after{
+        content:"";
+        display:block;
+        position:absolute;
+        width: 2px;
+        top:.25em;
+        bottom:.25em;
+        background: $gold;
+    }
+
+    &:before{
+        left: 10px;
+    }
+
+    &:after{
+        left:0;
+    }
+ }
+
+p,
+ul{
+    margin: $gutter/10 0 $gutter/2;
+    font-size: 1em;
+    line-height: 2.25;
+}
+
+.lead{
+    font-size: 1.125em;
+    font-weight:200;
+    color: rgba($body,.7);
+}
+
+
+
+@media only screen and (max-width:$screen-xxs){
+    h1{ font-size: 3.75em; }
+    h2{ font-size: 2em; }
+}
+
+
+@media only screen and (min-width:$screen-sm){
+    h1{ font-size: 6.125em; }
+    h2{ font-size: 2.375em; }
+    h3{ font-size: 1.375em; }
+    blockquote{ font-size: 2.8125em; }
+    h4,
+    p,
+    ul{
+        font-size: 1.0625em;
+    }
+    .lead{
+        font-size:1.25em;
+    }
+}
+@media only screen and (min-width:$screen-md){
+    h1{ font-size: 8.25em; }
+    h3{ font-size: 1.375em; }
+    blockquote{ font-size:3.125em; }
+    h4,
+    p,
+    ul{
+        font-size: 1.125em;
+    }
+    .lead{
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width:$screen-lg){
+    h1{ font-size: 10.625em; }
+    h2{ font-size: 2.625em; }
+    blockquote{ font-size: 3.75em; }
+    .lead{
+        font-size: 1.875em;
+    }
+}
+
+
+
+
+//buttons and fancy things
+.btn {
+    font-size: 1.25em;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    font-family: $font-serif;
+    border: 0;
+    white-space: nowrap;
+    text-decoration:none;
+    padding: 1.5em 4em;
+    line-height: 1;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position:relative;
+    margin-bottom: .5em;
+
+    &:before,
+    &:after{
+        content:"";
+        display:block;
+        height: 1px;
+        position:absolute;
+        top:0;
+        bottom:0;
+        margin:auto;
+        width: .875em;
+        background: $blue-dark;
+    }
+
+    &:before{
+        left: 2em;
+        box-shadow: -6px 0 0 0 $blue-dark,
+            0 -4px 0 0 $blue-dark,
+            0 4px 0 0 $blue-dark;
+    }
+
+    &:after{
+        right: 2em;
+        box-shadow: 6px 0 0 0 $blue-dark,
+            0 -4px 0 0 $blue-dark,
+            0 4px 0 0 $blue-dark;
+    }
+
+    &-blue{
+        background: $blue;
+        color: #FFF;
+        &:hover,&:focus{
+            background:$blue-hover;
+        }
+    }
+
+
+
+    &-mobile,&-desktop{
+        display:none;
+    }
+
+
+    @media only screen and (max-width: $screen-xxs){
+        font-size: .9375em;
+        padding: 1.5em 2.5em;
+
+        &:before{
+            left:1em;
+        }
+        &:after{
+            right:1em;
+        }
+
+        &-mobile{
+            display:inline-block;
+        }
+    }
+
+    @media only screen and (min-width: $screen-md){
+        &-desktop{
+            display:inline-block;
+        }
+    }
+}
+
+hr {
+	width: 100px;
+	height:.75em;
+	border:0;
+	outline:0;
+	border-top: 1px solid $gold;
+    border-bottom: 1px solid $gold;
+    margin: ($gutter / 2) auto $gutter;
+}
+
+.arrow-button{
+	@extend .text-hidden;
+    position:relative;
+    background:transparent;
+    outline:0;
+	width: 1em;
+	height: 1em;
+	padding: .25em;
+	transform-origin: center center;
+	transform: rotate(-45deg);
+    border: 2px solid $gold;
+    font-size: 1.375em;
+    
+	
+	&:before{
+		position:absolute;
+		content:"";
+		display:block;
+		width: .5em;
+		height: .5em;
+		border: 2px solid $gold;
+	}
+	
+	&.left{
+		&,&:before{
+			border-bottom:0;
+			border-right:0;
+		}
+		&:before{
+			right: 0;
+			bottom: 0;
+		}
+	}
+	
+	
+	&.right{
+		&,&:before{
+			border-top:0;
+			border-left:0;
+		}
+		&:before{
+			left: 0;
+			top: 0;
+		}
+	}
+	
+	
+	&.down{
+		&,&:before{
+			border-top:0;
+			border-right:0;
+		}
+		&:before{
+			right: 0;
+			top: 0;
+		}
+	}
+}
+
+
+.content-normalize{
+    h2,.h2{
+        @extend .text-font-serif;
+        @extend .text-gold;
+    }
+    h3,.h3{
+        @extend .text-blue;
+        @extend .text-bold;
+    }
+
+    h4,.h4{
+        @extend .text-bold;
+    }
+}
+
+//owl custom
+.owl{
+    &-carousel{
+        margin-top: $gutter;
+        padding: 0 $gutter * 1.8;
+        margin-left:auto;
+        margin-right:auto;
+        position:relative;
+
+        &.owl-carousel-static{
+            position: static;
+        }
+    }
+    &-nav {
+        left:0;
+        right:0;
+        margin: auto;
+
+        &>button{
+            position:absolute;
+            top:50%;
+            transform: translateY(-50%);
+            border: 1px solid $gold !important;
+            width: $gutter * 1.2;
+            height: $gutter * 1.9;
+
+            &.owl-prev{
+                left:0;
+                right:auto;
+
+                .owl-carousel-static &{
+                    left: $gutter;
+                }
+            }
+            &.owl-next{ 
+                right:0;
+                left:auto;
+
+                .owl-carousel-static &{
+                    right: $gutter;
+                }
+            }
+
+            &:hover,
+            &:focus{
+                background: $gold-pale!important;
+            }
+
+            .arrow-button{
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                lefT:0;margin:auto;
+            }
+        }
+    }
+    &-dots{
+        margin-top: $gutter/2;
+    }
+    &-dot{
+
+        span{
+
+            background: $gold-pale;
+            height: 3px;
+            width: 2.5em;
+            display:inline-block;
+            margin-left: .375em;
+            margin-left: .375em;
+        }
+
+        &.active{
+
+
+        span{
+
+                background: $blue;
+            }
+        }
+    }
+
+}
