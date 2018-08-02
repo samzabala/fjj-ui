@@ -407,7 +407,7 @@ ul{
 }
 
 hr {
-	width: 100px;
+	width: $gutter * 1.1;
 	height:.75em;
 	border:0;
 	outline:0;
